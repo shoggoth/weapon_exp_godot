@@ -6,6 +6,8 @@
 
 ### TODO
 - Scaffolding - Player and control
+- Import hit/hurt box and other useful code, perhaps make submodule of them
+- Global class with statics
 - Initial weapon and WeaponComponent classes
 - Melee, projectile and beam weapon specialisation
 
@@ -21,4 +23,3 @@ https://www.youtube.com/watch?v=KfdTJ1QuPvU Beginner platformer P10 GeMakesGames
 https://www.youtube.com/watch?v=tNqFLmbWW-Y Bacon and Games Godot template
 
 ### Notes
-

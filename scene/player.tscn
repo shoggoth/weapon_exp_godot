@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://7cctv1wjob60"]
+
+[ext_resource type="Texture2D" uid="uid://clwt018ampbxf" path="res://gfx/White1px.png" id="1_xo3ru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjaqi"]
+size = Vector2(16, 16)
+
+[node name="Test" type="Node"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+collision_mask = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(16, 16)
+texture = ExtResource("1_xo3ru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_hjaqi")

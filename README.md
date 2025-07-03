@@ -6,12 +6,14 @@
 
 ### TODO
 - Scaffolding - Player and control
-- What is the GDScript language server used for?
-- Global class with statics
+- Try the VSCode integration https://forum.godotengine.org/t/classic-blunders-when-using-godot-4-2-gdscript-with-vscode/42426
 - Initial weapon and WeaponComponent classes
 - Melee, projectile and beam weapon specialisation
 
 ### Done
+- What is the GDScript language server used for?
+- Global class with statics
+- TextNode running in editor with Crossfire shader
 - Import hit/hurt box and other useful code, perhaps make submodule of them
 - Boot splash logo
 

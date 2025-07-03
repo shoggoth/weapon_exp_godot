@@ -6,13 +6,14 @@
 
 ### TODO
 - Scaffolding - Player and control
-- Import hit/hurt box and other useful code, perhaps make submodule of them
+- What is the GDScript language server used for?
 - Global class with statics
 - Initial weapon and WeaponComponent classes
 - Melee, projectile and beam weapon specialisation
 
 ### Done
-- Nowt
+- Import hit/hurt box and other useful code, perhaps make submodule of them
+- Boot splash logo
 
 ### Oubliette
 - Nowt

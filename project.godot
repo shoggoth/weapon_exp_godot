@@ -16,6 +16,11 @@ boot_splash/fullsize=false
 boot_splash/image="uid://1cmgw6jtppo"
 config/icon="uid://1cmgw6jtppo"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [input]
 
 up={

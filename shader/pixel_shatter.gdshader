@@ -13,7 +13,7 @@ void fragment() {
     vec2 ns = number_of_splits;										// Number of splits.
 
     vec2 tc = UV * ef;
-    vec2 tw = vec2(1.0 / (ns.x + 1.0), 1.0 / (ns.y + 1.0));			// Textured band width.
+    vec2 tw = vec2(1.0 / (ns.x + 1.0), 1.0 / (ns.y + 1.0));		// Textured band width.
     vec2 sw = vec2((ef.x - 1.0) / ns.x, (ef.y - 1.0) / ns.y);		// Spacing band width.
 
     // Calculate the modulo m and discard pixels that are in the spacing band.

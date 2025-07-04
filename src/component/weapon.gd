@@ -15,6 +15,12 @@ signal weapon_ready
 var can_fire := true
 var _pool: Array[Node2D]
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("fire"):
+		print("Fire button pressed")
+	else: if event.is_action_released("fire"):
+		print("Fire button released")
+
 func _ready():
 	for _t in pool_size:
 		_pool.append(bullet_scene.instantiate())

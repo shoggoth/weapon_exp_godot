@@ -9,7 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s4jxa"]
 shader = ExtResource("1_fvtld")
 shader_parameter/offset = Vector2(-17.5, 0)
-shader_parameter/time = 402
+shader_parameter/time = 1143
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oh5ij"]
 shader = ExtResource("4_s4jxa")

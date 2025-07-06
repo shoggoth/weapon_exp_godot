@@ -73,6 +73,12 @@ weapon_cycle_down={
 2d_physics/layer_3="Pickup"
 2d_physics/layer_4="Bullet"
 
+[physics]
+
+common/physics_ticks_per_second=50
+common/physics_jitter_fix=0.0
+common/physics_interpolation=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

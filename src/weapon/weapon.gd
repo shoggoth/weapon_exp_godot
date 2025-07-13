@@ -1,10 +1,7 @@
-class_name Weapon extends Node
-
-signal weapon_ready(from: Weapon)
-signal weapon_fired(from: Weapon)
-signal weapon_empty(from: Weapon)
+@tool class_name Weapon extends Resource
 
 @export_group("Properties")
+@export var weapon_name: String
 @export var bullet_scene: PackedScene
 @export var bullet_range: float = 200
 @export var radius: float = 0
@@ -12,17 +9,24 @@ signal weapon_empty(from: Weapon)
 @export var pool_size: int = 0
 @export_group("Control")
 @export var quantise_direction: bool = false
+@export_group("Experimental")
+@export var ranged: bool
 
-func _ready():
-	weapon_ready.emit(self)
-	weapon_empty.emit(self)
-
-func fire(from_node: Node2D, direction: Vector2 = Vector2.ZERO, completion: Callable = Global.null_callable):
+func fire(from_node: Node2D, direction: Vector2 = Vector2.ZERO, completion: Callable = Global.null_callable) -> bool:
 	print("Fire from ", from_node, " direction ", direction)
 	Ranged.new().fire(from_node, direction)
-	weapon_fired.emit(self)
-	if completion != Global.null_callable: completion.call()
+	if completion.is_valid(): completion.call()
+	return true
 
-class Ranged:
+class Ranged extends Resource:
+	@export_group("Properties")
+	@export var weapon_name: String
+	@export var bullet_scene: PackedScene
+	@export var bullet_range: float = 200
+	@export var radius: float = 0
+	@export var bullet_offset: Vector2
+	@export var pool_size: int = 0
+	@export_group("Control")
+	@export var quantise_direction: bool = false
 	func fire(from_node: Node2D, direction: Vector2 = Vector2.ZERO):
 		print("Ranged Fire from ", from_node, " direction ", direction)

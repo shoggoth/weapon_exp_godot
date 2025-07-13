@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://p37towmalkg0" path="res://src/component/weapon.gd" id="1_ct4mp"]
 [ext_resource type="Shader" uid="uid://bug68ylanqmb2" path="res://shader/text_node_font.gdshader" id="1_fvtld"]
 [ext_resource type="Script" uid="uid://8tfo80t0boj1" path="res://src/util/text_node.gd" id="2_ct4mp"]
-[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon/weapon.gd" id="2_oh5ij"]
+[ext_resource type="Resource" uid="uid://daca5xrhpp7vd" path="res://src/weapon/club.tres" id="2_oh5ij"]
 [ext_resource type="Shader" uid="uid://bcwcfrtu6liex" path="res://shader/pixel_shatter.gdshader" id="4_s4jxa"]
 [ext_resource type="Texture2D" uid="uid://d1ir3ur6164gs" path="res://gfx/temp/Check.png" id="5_s4jxa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s4jxa"]
 shader = ExtResource("1_fvtld")
 shader_parameter/offset = Vector2(-17.5, 0)
-shader_parameter/time = 3390
+shader_parameter/time = 14861
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oh5ij"]
 shader = ExtResource("4_s4jxa")
@@ -28,14 +28,10 @@ zoom = Vector2(8, 8)
 [node name="Player" type="CharacterBody2D" parent="."]
 collision_mask = 8
 
-[node name="WeaponComponent" type="Node" parent="Player" node_paths=PackedStringArray("current_weapon")]
+[node name="WeaponComponent" type="Node" parent="Player"]
 script = ExtResource("1_ct4mp")
-current_weapon = NodePath("Weapon")
+weapon = ExtResource("2_oh5ij")
 metadata/_custom_type_script = "uid://p37towmalkg0"
-
-[node name="Weapon" type="Node" parent="Player/WeaponComponent"]
-script = ExtResource("2_oh5ij")
-metadata/_custom_type_script = "uid://cvwn4lfxfhsd2"
 
 [node name="TextNode" type="Node2D" parent="Player"]
 texture_filter = 1
@@ -54,7 +50,3 @@ texture = ExtResource("5_s4jxa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_hjaqi")
-
-[connection signal="weapon_empty" from="Player/WeaponComponent/Weapon" to="Player/WeaponComponent" method="_on_weapon_weapon_empty"]
-[connection signal="weapon_fired" from="Player/WeaponComponent/Weapon" to="Player/WeaponComponent" method="_on_weapon_weapon_fired"]
-[connection signal="weapon_ready" from="Player/WeaponComponent/Weapon" to="Player/WeaponComponent" method="_on_weapon_weapon_ready"]

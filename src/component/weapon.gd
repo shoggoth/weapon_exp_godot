@@ -1,22 +1,20 @@
 class_name WeaponComponent extends Node
 
-@export var current_weapon: Weapon
+signal weapon_ready(weapon: Weapon)
+signal weapon_fired(weapon: Weapon)
+signal weapon_empty(weapon: Weapon)
+
+@export var weapon: Weapon
+@export var foo: Shape2D
+
+func _ready():
+	weapon_ready.emit(weapon)
+	weapon_empty.emit(weapon)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("fire"):
-		print("Fire button pressed")
-		if current_weapon:
-			print("Fire weapon: " + str(current_weapon))
-			current_weapon.fire(self.get_parent(), Vector2.RIGHT, func(): print("Fire weapon cb"))
+	if weapon && event.is_action_pressed("fire"):
+		weapon_fired.emit(weapon)
+		weapon.fire(self.get_parent(), Vector2.RIGHT, func(): print("Fire weapon cb"))
+		weapon.fire(self.get_parent(), Vector2.LEFT)
 	else: if event.is_action_released("fire"):
-		print("Fire button released")
-
-
-func _on_weapon_weapon_ready(from: Weapon) -> void:
-	print("Weapon " + str(from) + " is ready")
-
-func _on_weapon_weapon_empty(from: Weapon) -> void:
-	print("Weapon " + str(from) + " is empty")
-
-func _on_weapon_weapon_fired(from: Weapon) -> void:
-	print("Weapon " + str(from) + " was fired")
+		print("What about charging?")

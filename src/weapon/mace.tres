@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://birx7qeirtrfn"]
+
+[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon/weapon.gd" id="1_ryjes"]
+
+[resource]
+script = ExtResource("1_ryjes")
+weapon_name = "Mace"
+bullet_range = 200.0
+radius = 14.0
+bullet_offset = Vector2(0, 0)
+pool_size = 0
+quantise_direction = false
+metadata/_custom_type_script = "uid://cvwn4lfxfhsd2"

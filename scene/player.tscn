@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://p37towmalkg0" path="res://src/component/weapon.gd" id="1_ct4mp"]
 [ext_resource type="Shader" uid="uid://bug68ylanqmb2" path="res://shader/text_node_font.gdshader" id="1_fvtld"]
 [ext_resource type="Script" uid="uid://8tfo80t0boj1" path="res://src/util/text_node.gd" id="2_ct4mp"]
-[ext_resource type="Resource" uid="uid://daca5xrhpp7vd" path="res://src/weapon/club.tres" id="2_oh5ij"]
+[ext_resource type="Resource" uid="uid://b2v2bxcvuxit0" path="res://data/weapon/sword.tres" id="2_oh5ij"]
 [ext_resource type="Shader" uid="uid://bcwcfrtu6liex" path="res://shader/pixel_shatter.gdshader" id="4_s4jxa"]
 [ext_resource type="Texture2D" uid="uid://d1ir3ur6164gs" path="res://gfx/temp/Check.png" id="5_s4jxa"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s4jxa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hp4bs"]
 shader = ExtResource("1_fvtld")
 shader_parameter/offset = Vector2(-17.5, 0)
-shader_parameter/time = 14861
+shader_parameter/time = 8779
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oh5ij"]
 shader = ExtResource("4_s4jxa")
@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://p37towmalkg0"
 
 [node name="TextNode" type="Node2D" parent="Player"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_s4jxa")
+material = SubResource("ShaderMaterial_hp4bs")
 position = Vector2(0, -12.5)
 script = ExtResource("2_ct4mp")
 text = "AREA-88"

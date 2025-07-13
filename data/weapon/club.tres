@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://daca5xrhpp7vd"]
 
-[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon/weapon.gd" id="1_6ldya"]
+[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon.gd" id="1_6ldya"]
 
 [resource]
 script = ExtResource("1_6ldya")
 weapon_name = "Club"
-bullet_range = 200.0
+attack_type = 2
 radius = 16.0
-bullet_offset = Vector2(0, 0)
-pool_size = 0
+offset = Vector2(0, 0)
 quantise_direction = false
+ranged = false
 metadata/_custom_type_script = "uid://cvwn4lfxfhsd2"

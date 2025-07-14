@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://cpsifgs7pnwo7"]
+[gd_resource type="Resource" script_class="RangedWeapon" load_steps=2 format=3 uid="uid://khctij8ti3yh"]
 
-[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon.gd" id="1_0aanf"]
+[ext_resource type="Script" uid="uid://bym0fdwsf66ot" path="res://src/weapon/ranged.gd" id="1_0aanf"]
 
 [resource]
 script = ExtResource("1_0aanf")
-name = "Pistol"
-attack_type = 4
+name = ""
+attack_type = 0
 radius = 0.0
 offset = Vector2(0, 0)
 quantise_direction = false
 ranged = false
-metadata/_custom_type_script = "uid://cvwn4lfxfhsd2"
+metadata/_custom_type_script = "uid://bym0fdwsf66ot"

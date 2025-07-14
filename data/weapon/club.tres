@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://daca5xrhpp7vd"]
+[gd_resource type="Resource" script_class="MeleeWeapon" load_steps=2 format=3 uid="uid://bntk0ore4jrpm"]
 
-[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon.gd" id="1_6ldya"]
+[ext_resource type="Script" uid="uid://dxaob66xka4f4" path="res://src/weapon/melee.gd" id="1_i220h"]
 
 [resource]
-script = ExtResource("1_6ldya")
-name = "Club"
-attack_type = 2
-radius = 16.0
+script = ExtResource("1_i220h")
+name = ""
+attack_type = 0
+radius = 0.0
 offset = Vector2(0, 0)
 quantise_direction = false
 ranged = false
-metadata/_custom_type_script = "uid://cvwn4lfxfhsd2"
+metadata/_custom_type_script = "uid://dxaob66xka4f4"

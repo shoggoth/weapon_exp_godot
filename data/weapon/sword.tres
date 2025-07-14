@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://b2v2bxcvuxit0"]
 
-[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon.gd" id="1_di2va"]
+[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon/base.gd" id="1_uqj7r"]
 
 [resource]
-script = ExtResource("1_di2va")
+script = ExtResource("1_uqj7r")
 name = "Sword"
 attack_type = 1
 radius = 42.0

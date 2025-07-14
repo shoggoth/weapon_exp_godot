@@ -1,11 +1,10 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://phoqjfvbo57y"]
 
-[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon.gd" id="1_ih04n"]
+[ext_resource type="Script" uid="uid://cvwn4lfxfhsd2" path="res://src/weapon/base.gd" id="1_ih04n"]
 
 [resource]
 script = ExtResource("1_ih04n")
 name = "Dagger"
-attack_type = 0
 radius = 16.0
 offset = Vector2(0, 0)
 quantise_direction = false

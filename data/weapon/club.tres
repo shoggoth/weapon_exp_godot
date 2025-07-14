@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_6ldya")
-weapon_name = "Club"
+name = "Club"
 attack_type = 2
 radius = 16.0
 offset = Vector2(0, 0)

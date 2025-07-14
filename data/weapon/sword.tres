@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_di2va")
-weapon_name = "Sword"
+name = "Sword"
 attack_type = 1
 radius = 42.0
 offset = Vector2(0, 0)

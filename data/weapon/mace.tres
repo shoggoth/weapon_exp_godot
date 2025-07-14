@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_ryjes")
-weapon_name = "Mace"
+name = "Mace"
 attack_type = 2
 radius = 14.0
 offset = Vector2(0, 0)

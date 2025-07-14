@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_0aanf")
-weapon_name = ""
+name = "Pistol"
 attack_type = 4
 radius = 0.0
 offset = Vector2(0, 0)

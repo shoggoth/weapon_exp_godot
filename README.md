@@ -9,6 +9,7 @@
 - Try the VSCode integration https://forum.godotengine.org/t/classic-blunders-when-using-godot-4-2-gdscript-with-vscode/42426
 - Initial weapon and WeaponComponent classes
 - Melee, projectile and beam weapon specialisation
+- Mechanism for weapon stats and modifiers
 
 ### Done
 - What is the GDScript language server used for?

@@ -13,8 +13,7 @@ func _ready():
 
 func _input(event: InputEvent) -> void:
 	if weapon && event.is_action_pressed("fire"):
-		weapon_fired.emit(weapon)
 		weapon.fire(self.get_parent(), Vector2.RIGHT, func(): print("Fire weapon cb"))
-		weapon.fire(self.get_parent(), Vector2.LEFT)
+		if weapon.fire(self.get_parent(), Vector2.LEFT): weapon_fired.emit(weapon)
 	else: if event.is_action_released("fire"):
 		print("What about charging?")

@@ -1,9 +1,9 @@
-@tool class_name Weapon extends Resource
+class_name Weapon extends Resource
 
 enum AttackType { THRUST, SLASH, BASH, THROW, SHOOT }
 
 @export_group("Properties")
-@export var weapon_name: String
+@export var name: String
 @export var attack_type: AttackType
 @export var scene: PackedScene
 @export var radius: float = 0
@@ -13,15 +13,17 @@ enum AttackType { THRUST, SLASH, BASH, THROW, SHOOT }
 @export_category("Experimental")
 @export var ranged: bool
 
+var foo: Ranged
+
 func fire(from_node: Node2D, direction: Vector2 = Vector2.ZERO, completion: Callable = Global.null_callable) -> bool:
 	print("Fire from ", from_node, " direction ", direction)
 	match attack_type:
 		AttackType.THRUST:
-			Melee.new().thrust()
+			Melee.new("foo 1").thrust()
 		AttackType.SLASH:
-			Melee.new().slash()
+			Melee.new("foo 2").slash()
 		AttackType.BASH:
-			Melee.new().bash()
+			Melee.new("foo 3").bash()
 		[AttackType.THROW, AttackType.SHOOT]:
 			Ranged.new().fire(from_node, direction)
 			
@@ -41,6 +43,9 @@ class Melee:
 
 	func bash():
 		print("Bosh-a!!11!!")
+
+	func _init(foo: String) -> void:
+		print("Init param %s" % foo)
 
 class Ranged:
 	@export_group("Properties")

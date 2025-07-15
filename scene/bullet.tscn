@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ol0wjeey0okr"]
+
+[ext_resource type="Script" uid="uid://8ufxfh6ug4wb" path="res://scene/bullet.gd" id="1_m2l4i"]
+[ext_resource type="Texture2D" uid="uid://brioshevnkdue" path="res://gfx/temp/White1px.png" id="2_1bt1p"]
+[ext_resource type="AudioStream" uid="uid://dxs68gf3p0him" path="res://snd/bullet.wav" id="3_duwpg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dk1vr"]
+radius = 1.0
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_m2l4i")
+metadata/_custom_type_script = "uid://drmyyvshekjpg"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dk1vr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1bt1p")
+
+[node name="Fire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_duwpg")

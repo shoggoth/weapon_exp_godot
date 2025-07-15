@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_uqj7r")
 name = "Sword"
-attack_type = 1
 radius = 42.0
 offset = Vector2(0, 0)
 quantise_direction = false

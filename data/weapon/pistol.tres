@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("1_0aanf")
+bullet = ExtResource("1_hr5cf")
 name = ""
-scene = ExtResource("1_hr5cf")
 radius = 0.0
 offset = Vector2(0, 0)
 quantise_direction = false

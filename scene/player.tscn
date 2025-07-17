@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://d1ir3ur6164gs" path="res://gfx/temp/Check.png" id="5_s4jxa"]
 [ext_resource type="PackedScene" uid="uid://ol0wjeey0okr" path="res://scene/bullet.tscn" id="8_g2vtq"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihjo1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2vtq"]
 shader = ExtResource("1_fvtld")
 shader_parameter/offset = Vector2(-17.5, 0)
-shader_parameter/time = 11756
+shader_parameter/time = 4809
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oh5ij"]
 shader = ExtResource("4_s4jxa")
@@ -28,7 +28,6 @@ size = Vector2(16, 16)
 zoom = Vector2(8, 8)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-visible = false
 collision_mask = 8
 script = ExtResource("1_hp4bs")
 
@@ -39,7 +38,7 @@ metadata/_custom_type_script = "uid://p37towmalkg0"
 
 [node name="TextNode" type="Node2D" parent="Player"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_ihjo1")
+material = SubResource("ShaderMaterial_g2vtq")
 position = Vector2(0, -12.5)
 script = ExtResource("2_ct4mp")
 text = "AREA-88"
@@ -56,5 +55,6 @@ texture = ExtResource("5_s4jxa")
 shape = SubResource("RectangleShape2D_hjaqi")
 
 [node name="Bullet" parent="." instance=ExtResource("8_g2vtq")]
+visible = false
 
 [connection signal="weapon_fired" from="Player/WeaponComponent" to="Player" method="_on_weapon_component_weapon_fired"]

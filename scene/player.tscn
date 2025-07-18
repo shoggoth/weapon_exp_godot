@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://7cctv1wjob60"]
+[gd_scene load_steps=13 format=3 uid="uid://7cctv1wjob60"]
 
 [ext_resource type="Script" uid="uid://p37towmalkg0" path="res://src/component/weapon.gd" id="1_ct4mp"]
 [ext_resource type="Shader" uid="uid://bug68ylanqmb2" path="res://shader/text_node_font.gdshader" id="1_fvtld"]
@@ -8,11 +8,12 @@
 [ext_resource type="Shader" uid="uid://bcwcfrtu6liex" path="res://shader/pixel_shatter.gdshader" id="4_s4jxa"]
 [ext_resource type="Texture2D" uid="uid://d1ir3ur6164gs" path="res://gfx/temp/Check.png" id="5_s4jxa"]
 [ext_resource type="PackedScene" uid="uid://ol0wjeey0okr" path="res://scene/bullet.tscn" id="8_g2vtq"]
+[ext_resource type="Texture2D" uid="uid://b5d1e76ufsklu" path="res://gfx/temp/CheckAnim.png" id="9_2fvbb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g2vtq"]
 shader = ExtResource("1_fvtld")
 shader_parameter/offset = Vector2(-17.5, 0)
-shader_parameter/time = 4809
+shader_parameter/time = 18549
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oh5ij"]
 shader = ExtResource("4_s4jxa")
@@ -55,6 +56,10 @@ texture = ExtResource("5_s4jxa")
 shape = SubResource("RectangleShape2D_hjaqi")
 
 [node name="Bullet" parent="." instance=ExtResource("8_g2vtq")]
-visible = false
+metadata/mute = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Bullet"]
+position = Vector2(20, 0)
+texture = ExtResource("9_2fvbb")
 
 [connection signal="weapon_fired" from="Player/WeaponComponent" to="Player" method="_on_weapon_component_weapon_fired"]

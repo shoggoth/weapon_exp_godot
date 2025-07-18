@@ -1,7 +1,11 @@
-[gd_resource type="Resource" script_class="RangedWeapon" load_steps=3 format=3 uid="uid://khctij8ti3yh"]
+[gd_resource type="Resource" script_class="RangedWeapon" load_steps=4 format=3 uid="uid://khctij8ti3yh"]
 
 [ext_resource type="Script" uid="uid://bym0fdwsf66ot" path="res://src/weapon/ranged.gd" id="1_0aanf"]
 [ext_resource type="PackedScene" uid="uid://ol0wjeey0okr" path="res://scene/bullet.tscn" id="1_hr5cf"]
+
+[sub_resource type="Curve" id="Curve_hr5cf"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 2
 
 [resource]
 script = ExtResource("1_0aanf")
@@ -11,4 +15,5 @@ radius = 0.0
 offset = Vector2(0, 0)
 quantise_direction = false
 ranged = false
+falloff = SubResource("Curve_hr5cf")
 metadata/_custom_type_script = "uid://bym0fdwsf66ot"

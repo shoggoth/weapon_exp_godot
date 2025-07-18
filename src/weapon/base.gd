@@ -3,12 +3,13 @@ class_name Weapon extends Resource
 @export_group("Properties")
 @export var name: String
 @export var scene: PackedScene
-@export var radius: float = 0
+@export var radius: float = 0.0
 @export var offset: Vector2
 @export_group("Control")
 @export var quantise_direction: bool = false
 @export_category("Experimental")
 @export var ranged: bool
+@export var falloff: Curve2D
 
 var foo: Ranged
 

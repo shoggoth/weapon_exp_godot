@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://ol0wjeey0okr" path="res://scene/bullet.tscn" id="8_g2vtq"]
 [ext_resource type="Texture2D" uid="uid://b5d1e76ufsklu" path="res://gfx/temp/CheckAnim.png" id="9_2fvbb"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2vtq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2fvbb"]
 shader = ExtResource("1_fvtld")
 shader_parameter/offset = Vector2(-17.5, 0)
-shader_parameter/time = 18549
+shader_parameter/time = 49
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oh5ij"]
 shader = ExtResource("4_s4jxa")
@@ -39,7 +39,7 @@ metadata/_custom_type_script = "uid://p37towmalkg0"
 
 [node name="TextNode" type="Node2D" parent="Player"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_g2vtq")
+material = SubResource("ShaderMaterial_2fvbb")
 position = Vector2(0, -12.5)
 script = ExtResource("2_ct4mp")
 text = "AREA-88"

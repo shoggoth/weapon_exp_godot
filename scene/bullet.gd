@@ -5,9 +5,6 @@ extends HitBox
 
 var direction: Vector2
 
-func _ready():
-	go(direction)
-
 func go(direction: Vector2) -> bool:
 	var move_tween = create_tween()
 	move_tween.tween_property(self, "position", direction * speed_multiplier, duration).as_relative()
